@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/landing-game/static/css/main.e6c13ad2.css",
+    "main.js": "/landing-game/static/js/main.0b18d4ac.js",
+    "static/js/787.25eaef86.chunk.js": "/landing-game/static/js/787.25eaef86.chunk.js",
+    "static/media/Logo.png": "/landing-game/static/media/Logo.01182eafd49ab7633cb7.png",
+    "static/media/img-sprite.svg": "/landing-game/static/media/img-sprite.5208a4e4a19022638c34b8a77ece0687.svg",
+    "index.html": "/landing-game/index.html",
+    "main.e6c13ad2.css.map": "/landing-game/static/css/main.e6c13ad2.css.map",
+    "main.0b18d4ac.js.map": "/landing-game/static/js/main.0b18d4ac.js.map",
+    "787.25eaef86.chunk.js.map": "/landing-game/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.0b18d4ac.js"
+  ]
+}
