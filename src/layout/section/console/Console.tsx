@@ -1,8 +1,6 @@
 import React from "react";
 import { AboutSection } from "../../../components/aboutSection/AboutSection";
 import { LgGameIsland } from "../../../components/lgIcon/LgGameIsland";
-import { LgGearForIsland } from "../../../components/lgIcon/LgGearForIsland";
-import { LgGemeboyForIsland } from "../../../components/lgIcon/LgGemeboyForIsland";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
@@ -12,10 +10,6 @@ export const Console =() => {
          <FlexWrapper align="center">
             <StyledImg>
                <LgGameIsland/>
-               <StyledGameBoy>
-                  <LgGemeboyForIsland/>
-               </StyledGameBoy>
-               <LgGearForIsland/>
             </StyledImg>
 
             <AboutSection preTitle={"About XBOX, PS"} 

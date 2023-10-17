@@ -14,13 +14,6 @@ export const Main =() => {
          <FlexWrapper align="center" direction={"row-reverse"} >
             <StyledMainImg>
                <LgMainRing/>
-               <StyledActivMan>
-                  <Icon iconId={"mainMan"} width={"543"} height={"585"} viewBox={"0 0 543 585"}/>
-                  <div>
-                     <Icon iconId={"tripleQuotes"}/>
-                  </div>
-               </StyledActivMan>
-
                <Cards nameIcon={LgMiniVr}/>
                <Cards nameIcon={LgMiniGameBoy}/>
             </StyledMainImg>

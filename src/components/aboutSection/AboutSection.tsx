@@ -15,7 +15,7 @@ export const AboutSection =(props:AboutSectionPropsType) => {
       <div>
          <PreTitleAndTitle preTitle={props.preTitle} title={props.title}/>
          <p>{props.text}</p>
-         <Button/>
+         <Button width={210}/>
       </div>
    );
 };

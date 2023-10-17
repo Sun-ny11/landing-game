@@ -11,9 +11,6 @@ export const Glasses =() => {
             <FlexWrapper align="center">
                <StyledImg>
                   <LgGlasses/>
-                  <StyledScreen>
-                     <Icon iconId={"screenForMan"} width={"289"} height={"389"} viewBox={"0 0 289 389"}/>
-                  </StyledScreen>
                </StyledImg>
 
                <AboutSection preTitle={"About VR Glasses"} 

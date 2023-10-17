@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 
 type PreTitleAndTitlePropsType = {
@@ -10,8 +11,18 @@ type PreTitleAndTitlePropsType = {
 export const PreTitleAndTitle =(props:PreTitleAndTitlePropsType) => {
    return (
       <div>
-         <span>{props.preTitle}</span>
-         <h2>{props.title}</h2>
+         <StyledPreTitle>{props.preTitle}</StyledPreTitle>
+         <StyledTitle>{props.title}</StyledTitle>
       </div>
    );
 };
+
+const StyledTitle = styled.h2`
+   font-family: "Qanelas Soft", sans-serif;
+   font-weight: bold;
+
+`
+
+const StyledPreTitle = styled.span`
+
+`
