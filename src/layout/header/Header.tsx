@@ -12,7 +12,7 @@ export const Header =() => {
       <StyledHeader>
          <Container>
             <FlexWrapper justify="space-between" align="flex-end">
-               <Logo/>
+               <Logo width="286px"/>
                <Menu menuItems={menuItems}/>
             </FlexWrapper>
          </Container>

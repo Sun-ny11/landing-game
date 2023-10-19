@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
+   
    *,
    *::before,
    *::after {
@@ -10,17 +11,6 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
    }
 
-   @font-face {
-      font-family: "Qanelas Soft";
-      src: url(./assets//fonts/Qanelas-SemiBold.eot?) format("eot"),
-      url(./assets//fonts/Qanelas-SemiBold.woff2) format("woff2"),
-      url(./assets//fonts/Qanelas-SemiBold.ttf) format("truetype");
-      font-weight: bold;
-      font-style: normal;
-      font-display: swap;
-   }
-   
-   
    body {
       margin: 0;
       font-family: 'Josefin Sans' -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

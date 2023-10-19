@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 type ButtonPropsType ={
    width?:number
+   name?: string
 }
 export const Button =(props:ButtonPropsType) => {
    return (
-      <Link {...props} href="#">Get Started Now</Link>
+      <Link {...props} href="#">{props.name || "Get Started Now"}</Link>
    );
 };
 
