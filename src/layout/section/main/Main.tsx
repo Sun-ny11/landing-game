@@ -52,6 +52,7 @@ background-color: #ffe6d7f8;
       background-image: url(${BgImg}); 
       background-repeat: no-repeat;
       background-size:cover;
+      background-position: center;
       top: 0;
       left: 0;
       right: 0;

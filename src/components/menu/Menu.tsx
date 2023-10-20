@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "../button/Button";
 import { FlexWrapper } from "../FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 export const Menu =(props:{menuItems:Array<string>}) => {
    return (
@@ -26,8 +27,13 @@ const StyledMeny = styled.nav`
       align-items: center;
       gap: 44px;
       margin-right:55px;
-
+      
+      
    }
+   @media ${theme.media.large} {
+         display: none;
+      }
+
 `
 const ListItem = styled.li`
    
@@ -48,9 +54,10 @@ const Link = styled.a`
       right: 0;
       width: 0%;
       height: 3px;
-      background-color: #020406;
+      background-color: ${theme.colors.preTitleColor};
       border-radius: 5px;
-      transition: .2s
+      transition: .4s;
+      opacity: 0.5;
    }
 
    &:hover:before {

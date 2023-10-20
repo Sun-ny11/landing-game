@@ -38,6 +38,7 @@ const StyledSection = styled.section`
       background-image: url(${imgBg});
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       position: absolute;
       top: 0;
       left: 0;
