@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/landing-game/static/css/main.d9015496.css",
-    "main.js": "/landing-game/static/js/main.61327b56.js",
+    "main.js": "/landing-game/static/js/main.6e30cbbb.js",
     "static/js/787.25eaef86.chunk.js": "/landing-game/static/js/787.25eaef86.chunk.js",
     "static/media/Logo.png": "/landing-game/static/media/Logo.01182eafd49ab7633cb7.png",
     "static/media/bgSecXbox.webp": "/landing-game/static/media/bgSecXbox.d02647e67632397ff676.webp",
@@ -15,11 +15,11 @@
     "static/media/cross.svg": "/landing-game/static/media/cross.e834cf96c26b8a8ad1064c9450d569a1.svg",
     "static/media/tripleArrow.svg": "/landing-game/static/media/tripleArrow.81991d970dac52a51edbbaf039ccd7bb.svg",
     "main.d9015496.css.map": "/landing-game/static/css/main.d9015496.css.map",
-    "main.61327b56.js.map": "/landing-game/static/js/main.61327b56.js.map",
+    "main.6e30cbbb.js.map": "/landing-game/static/js/main.6e30cbbb.js.map",
     "787.25eaef86.chunk.js.map": "/landing-game/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9015496.css",
-    "static/js/main.61327b56.js"
+    "static/js/main.6e30cbbb.js"
   ]
 }
