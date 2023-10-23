@@ -10,12 +10,13 @@ import { Container } from "../../../components/Container";
 import BgImg from "./../../../assets/img/bgMain.webp"
 import cross from "../../../assets/img/cross.svg";
 import tripleArrow from "../../../assets/img/tripleArrow.svg";
+import { theme } from "../../../styles/Theme";
 
 export const Main =() => {
    return (
       <StyledSection>
          <Container>
-            <FlexWrapper align="center" direction={"row-reverse"} >
+            <StyledFlexWrapper justify="center" align="center" direction={"row-reverse"} >
                <StyledMainImg>
                   <LgMainRing/>
 
@@ -35,18 +36,21 @@ export const Main =() => {
                                  specialPrice={"$50!"}
                                  text={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed."} />
                </StyledSectionWrapper>
-            </FlexWrapper>
+            </StyledFlexWrapper>
          </Container>
       </StyledSection>
    );
 };
 
+
 const StyledSection = styled.section`
+
 background-color: #ffe6d7f8;
    min-height: 100vh;
    display: flex;
    position: relative;
-
+   padding-top: 78px;
+   
    &::after {
       content: "";
       background-image: url(${BgImg}); 
@@ -61,21 +65,40 @@ background-color: #ffe6d7f8;
       z-index: -1;
    }
 `
+const StyledFlexWrapper = styled(FlexWrapper)`
+   @media ${theme.media.tablet} {
+      flex-direction: column-reverse;
+   }
+`
 const StyledMainImg = styled.div`
    position: relative;
+   z-index: 1;
+   /* max-width: 100%; */
 `
 const UpperCard = styled.div`
    position: absolute;
-   top: -14px;
-   left: -50px;
+   top: 0px;
+   left: -3px;
+   max-width: 100%;
+   @media ${theme.media.large} {
+      top: 0;
+      left: 0;
+   }
 `
 const LowerCard = styled.div`
    position: absolute;
-   bottom: -18px;
-   right: -126px;
+   bottom: -32px;
+   right: 0;
+   max-width: 100%;
+   @media ${theme.media.tablet} {
+      bottom: 0;
+      right: 0;
+   }
 `
 const StyledSectionWrapper = styled.div`
-position: relative;
+   max-width: 528px;
+
+   position: relative;
    &::before{
       content: url(${cross});
       /* tripleArrow */
@@ -88,5 +111,12 @@ position: relative;
       position: absolute;
       top: 0;
       left: 40%;
+   }
+
+   @media ${theme.media.tablet} {
+      margin: 50px 0;
+      &::before{
+         display: none;
+      }
    }
 `

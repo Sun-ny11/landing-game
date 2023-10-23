@@ -1,8 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const LgMainRing =() => {
    return (
-      <svg width="568" height="585" viewBox="0 0 568 585" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <StyledSvg width="568" height="585" viewBox="0 0 568 585" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path opacity="0.3" d="M328.585 583.829C457.22 583.829 561.5 479.549 561.5 350.914C561.5 222.279 457.22 117.999 328.585 117.999C199.949 117.999 95.6699 222.279 95.6699 350.914C95.6699 479.549 199.949 583.829 328.585 583.829Z" fill="#4E8FD3"/>
          <path opacity="0.3" d="M275.915 580.829C404.55 580.829 508.83 476.549 508.83 347.914C508.83 219.279 404.55 114.999 275.915 114.999C147.279 114.999 42.9999 219.279 42.9999 347.914C42.9999 476.549 147.279 580.829 275.915 580.829Z" fill="#4E8FD3"/>
          <path d="M303.492 582.829C432.127 582.829 536.407 478.549 536.407 349.914C536.407 221.279 432.127 116.999 303.492 116.999C174.857 116.999 70.5771 221.279 70.5771 349.914C70.5771 478.549 174.857 582.829 303.492 582.829Z" fill="url(#paint0_linear_39_2251)"/>
@@ -77,7 +79,14 @@ export const LgMainRing =() => {
          <stop offset="1" stop-color="#446381"/>
          </linearGradient>
          </defs>
-      </svg>
+      </StyledSvg>
 
    );
 };
+
+const StyledSvg = styled.svg`
+  
+   @media ${theme.media.large} {
+      max-width: 100%;
+   }
+`

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./../../assets/img/Logo.png"
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type LogoPropsType ={
    width: string
@@ -19,7 +20,12 @@ const StyledLogo = styled.a<LogoPropsType>`
       display: inline-block;
       width: ${props => props.width};
       /* object-fit: cover; */
+
+      @media ${theme.media.mobile}{
+         width: 239px;
+      }
    }
+   
    
 
 `

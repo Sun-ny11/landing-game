@@ -3,6 +3,7 @@ import { Button } from "../button/Button";
 import { PreTitleAndTitle } from "./PreTitleAndTitle"
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 
 type AboutSectionPropsType = {
@@ -16,20 +17,19 @@ type AboutSectionPropsType = {
 
 export const AboutSection =(props:AboutSectionPropsType) => {
    return (
-      <div>
+      <StyledSectionText>
          <PreTitleAndTitle preTitle={props.preTitle} title={props.title} special={props.special} specialPrice={props.specialPrice} />
          <StyledText>{props.text}</StyledText>
          <Button width={210}/>
-      </div>
+      </StyledSectionText>
    );
 };
 
-const StyledText = styled.p`
-   color: ${theme.colors.textColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 18px;
-   font-weight: 500;
-   line-height: 29px; /* 161.111% */
 
+const StyledSectionText = styled.div`
+   max-width: 518px;
+`
+const StyledText = styled.p`
+   ${font({weight: 500,Fmax: 18, Fmin: 13, lineHeight: "29px"})};
    margin: 25px 0 30px;
 `

@@ -5,6 +5,7 @@ import {LgGlasses} from "../../../components/lgIcon/LgGlasses"
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
+import { font } from "../../../styles/Common";
 
 export const Glasses =() => {
    return (
@@ -45,12 +46,7 @@ const AboutWrapper = styled.div`
       left: 0;
       z-index: -1;
 
-      font-family: "Qanelas Soft", sans-serif;
-      font-size: 418px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 75px; /* 17.943% */
-      
+      ${font({family: "Qanelas Soft",weight: 700,Fmax: 418, Fmin: 118, lineHeight: "75px"})};
       -webkit-text-stroke: 7px rgba(235, 131, 130, 1);
       color: transparent;
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { LgMiniVr } from "../lgIcon/LgMiniVr";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../FlexWrapper";
+import { font } from "../../styles/Common";
 
 
 
@@ -47,24 +48,12 @@ const StyledCards = styled.div`
 `
 
 const StyledTitleCard = styled.h3`
-   color: ${theme.colors.preTitleColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 10px;
-   font-weight: 500;
-   line-height: 12px; /* 120% */
+   ${font({weight:500,color: theme.colors.preTitleColor, Fmax:10,Fmin:7, lineHeight:"12px"})}
 `
 const StyledPriceCard = styled.span`
-   color: ${theme.colors.textColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 10px;
-   font-weight: 700;
-   line-height: 10px; /* 100% */
+   ${font({weight:700, Fmax:10,Fmin:7, lineHeight:"10px"})}
 `
 const StyledReview = styled.span`
-   color: ${theme.colors.preTitleColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 8px;
-   font-weight: 500;
-   line-height: 12px; /* 150% */
+   ${font({weight:500,color: theme.colors.preTitleColor, Fmax:8,Fmin:6, lineHeight:"12px"})}
    margin-left: 6px;
 `
