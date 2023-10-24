@@ -37,7 +37,7 @@ export const Cards =(props:CardsPropsType) => {
 
 const StyledCards = styled.div`
    max-width: 212px;
-   height: 95px;
+   min-height: 95px;
 
    border-radius: 10px;
    background-color: rgba(255, 255, 255, 0.4);
@@ -45,6 +45,11 @@ const StyledCards = styled.div`
    padding: 15px;
 
    filter: drop-shadow(0px 10px 20px rgba(235, 131, 130, 0.40));
+
+   @media ${theme.media.mobile} {
+      max-width: 202px;
+      height: 79px;
+   }
 `
 
 const StyledTitleCard = styled.h3`

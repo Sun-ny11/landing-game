@@ -85,8 +85,13 @@ export const LgMainRing =() => {
 };
 
 const StyledSvg = styled.svg`
-  
+   
    @media ${theme.media.large} {
       max-width: 100%;
    }
+   
+   @media ${theme.media.mobile} {
+      height: 100%;
+   }
+
 `

@@ -1,8 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const LgGameIsland =() => {
    return (
-   <svg width="560" height="567" viewBox="0 0 560 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <StyledSvg width="560" height="567" viewBox="0 0 560 567" fill="none" xmlns="http://www.w3.org/2000/svg">
 
       <g id="island">
       <path d="M320.778 566.949C396.278 565.608 513.077 536.909 546.695 463.139C558.439 437.376 557.642 399.5 556.048 323.746C555.581 301.483 554.803 269.032 549.359 228.764C538.062 145.116 530.362 88.1849 501.236 55.0138C428.263 -28.0695 164.644 -25.6585 52.0646 123.903C-9.33893 205.489 -18.7886 321.569 37.3651 417.485C99.1963 523.123 219.709 568.738 320.778 566.949Z" fill="url(#paint0_linear_39_3064)" fill-opacity="0.17"/>
@@ -264,7 +266,15 @@ export const LgGameIsland =() => {
       <rect width="88.8011" height="78.441" fill="white" transform="matrix(-1 0 0 -1 537.8 459.007)"/>
       </clipPath>
       </defs>
-   </svg>
+   </StyledSvg>
 
    );
 };
+
+const StyledSvg = styled.svg`
+   max-width: 100%;
+   @media ${theme.media.mobile}{
+      height: 100%;
+   }
+   
+`

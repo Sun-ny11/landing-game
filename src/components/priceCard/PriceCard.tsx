@@ -3,6 +3,7 @@ import { Button } from "../button/Button";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import checkMark from "./../../assets/img/checkMark.svg"
+import { font } from "../../styles/Common";
 
 
 type PriceCardPropsType ={
@@ -17,7 +18,7 @@ export const PriceCard =(props:PriceCardPropsType) => {
       <StyledCard>
             <StyledTitle>{props.plan}</StyledTitle>
             <StyledPrice>{props.price}<span> / Per Hour</span></StyledPrice>
-
+            
             <Unordered>
                {items.map((item, index) => {
                   return <ListItem key="index">
@@ -31,45 +32,42 @@ export const PriceCard =(props:PriceCardPropsType) => {
 };
 
 const StyledCard = styled.div`
+   max-width: 500px;
    padding: 46px;
    background-color: ${theme.colors.cardColor};
    border-radius: 20px;
-   &+& {
-      margin-left: 30px;
+
+
+   @media ${theme.media.mobile}{
+      padding: 34px;
+   }
+   @media ${theme.media.large}{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
    }
 `
 
 const StyledPrice = styled.span`
-   color: ${theme.colors.titleColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 50px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: normal;
+   ${font({color:theme.colors.titleColor, weight:700, Fmax: 50, Fmin: 40})}
    &>span{
       font-size: 18px;
       line-height: 0px; /* 0% */
+      white-space: nowrap;
    }
 `
 
 const StyledTitle = styled.h3`
-   color: ${theme.colors.preTitleColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 32px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: normal;
-
+   ${font({color:theme.colors.preTitleColor, weight:700, Fmax: 32, Fmin: 25})}
    margin-bottom: 34px;
-      
+
+   @media ${theme.media.mobile} {
+      margin-bottom: 24px;
+   }
 `
 const ListItem = styled.li`
-   color: ${theme.colors.textColor};
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 18px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 25px; /* 138.889% */
+${font({lineHeight: "25px", weight:500, Fmax: 18, Fmin: 14})}
    &+li {
       margin-top: 25px ;
    }
@@ -83,4 +81,5 @@ const ListItem = styled.li`
 
 const Unordered = styled.ul`
    margin: 46px 0;
+   text-align: start;
 `

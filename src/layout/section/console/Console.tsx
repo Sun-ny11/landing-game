@@ -6,12 +6,13 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import imgBg from "./../../../assets/img/bgSecXbox.webp"
 import tripleArrow from "../../../assets/img/tripleArrow.svg";
+import { theme } from "../../../styles/Theme";
 
 export const Console =() => {
    return (
       <StyledSection>
          <Container>
-            <FlexWrapper align="center" direction="row-reverse" gap="90px">
+            <StyledFlexWrapper align="center" justify="center" direction="row-reverse" gap="35px">
                <StyledImg>
                <LgGameIsland/>
                </StyledImg>
@@ -20,7 +21,7 @@ export const Console =() => {
                               title={"The New Xbox, Ps Series"} 
                               text={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed."}/>
                </StyledSectionWrapper>
-            </FlexWrapper>
+            </StyledFlexWrapper>
          </Container>
          
       </StyledSection>
@@ -47,6 +48,11 @@ const StyledSection = styled.section`
       z-index: -1;
    }
 `
+const StyledFlexWrapper = styled(FlexWrapper)`
+      @media ${theme.media.tablet}{
+         flex-wrap: wrap;
+   }
+`
 const StyledImg = styled.div`
 
    
@@ -56,8 +62,8 @@ const StyledSectionWrapper = styled.div`
    &::before{
       content: url(${tripleArrow});
       position: absolute;
-      bottom: 15%;
-      right: 20%;
+      bottom: 10%;
+      right: 7vw;
       /* background-image:url(${tripleArrow});
       background-repeat: no-repeat;
       background-position: left; */

@@ -37,7 +37,10 @@ const StyledPreTitle = styled.span<PreTitleAndTitlePropsType>`
    margin-bottom: 30px;
 `
 const StyledTitle = styled.h2`
-   ${font({color:theme.colors.titleColor, weight: 700, lineHeight:"75px", Fmax:68, Fmin:48})};
+   ${font({color:theme.colors.titleColor, weight: 700, lineHeight:"75px", Fmax:68, Fmin:38})};
+   @media ${theme.media.tablet} {
+      line-height: 43px;
+   }
 `
 
 const SpecialColor = styled.span`
