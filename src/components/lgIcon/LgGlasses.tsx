@@ -122,6 +122,8 @@ export const LgGlasses =() => {
             </linearGradient>
             </defs>
          </StyledSvg>
+
+    
 );
 };
 
