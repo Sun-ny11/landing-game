@@ -30,6 +30,10 @@ const StyledSectionText = styled.div`
    max-width: 518px;
 `
 const StyledText = styled.p`
-   ${font({weight: 500,Fmax: 18, Fmin: 13, lineHeight: "29px"})};
+   ${font({weight: 500,Fmax: 18, Fmin: 15, lineHeight: "29px"})};
    margin: 25px 0 30px;
+   
+   @media ${theme.media.tablet} {
+      margin-top: 20px ;
+   }
 `

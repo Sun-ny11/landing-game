@@ -64,16 +64,23 @@ background-color: #ffe6d7f8;
       position: absolute;
       z-index: -1;
    }
+
+   @media ${theme.media.tablet}{
+      padding-top: 90px;
+   }
 `
 const StyledFlexWrapper = styled(FlexWrapper)`
    @media ${theme.media.tablet} {
-      flex-direction: column-reverse;
+      flex-wrap: wrap;
    }
 `
 const StyledMainImg = styled.div`
    position: relative;
    z-index: 1;
-   /* max-width: 100%; */
+   @media ${theme.media.mobile} {
+   
+   }
+   
 `
 const UpperCard = styled.div`
    position: absolute;
@@ -84,6 +91,13 @@ const UpperCard = styled.div`
       top: 0;
       left: 0;
    }
+
+   @media ${theme.media.mobile} {
+      top:auto;
+      bottom: 13vh;
+      
+   }
+   
 `
 const LowerCard = styled.div`
    position: absolute;
@@ -101,7 +115,6 @@ const StyledSectionWrapper = styled.div`
    position: relative;
    &::before{
       content: url(${cross});
-      /* tripleArrow */
       position: absolute;
       bottom: -110px;
       left: 250px;
@@ -110,7 +123,10 @@ const StyledSectionWrapper = styled.div`
       content: url(${tripleArrow});
       position: absolute;
       top: 0;
-      left: 40%;
+      right: 17vw;
+      @media ${theme.media.tablet} {
+         right: 30vw
+      }
    }
 
    @media ${theme.media.tablet} {

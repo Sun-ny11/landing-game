@@ -5,12 +5,13 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
+import { font } from "../../styles/Common";
 
 export const Footer =() => {
    return (
       <StyledFooter>
          <Container>
-            <FlexWrapper justify="space-between" align="center">
+            <StyledFlexWrapper justify="space-between" align="center" >
                <Logo width="239px"/>
                <Copyright>Copyright © 2022 HEALAS.LT. All Rights Reserved.</Copyright>
 
@@ -31,7 +32,7 @@ export const Footer =() => {
                      </a>
                   </li>
                </Unordered>
-            </FlexWrapper>
+            </StyledFlexWrapper>
          </Container>
          
       </StyledFooter>
@@ -47,14 +48,15 @@ const StyledFooter = styled.footer`
       gap:30px;
    }
 `
-
+const StyledFlexWrapper = styled(FlexWrapper)`
+      @media ${theme.media.large} {
+         flex-direction: column;
+         gap: 20px;
+         padding: 20px;
+      }
+`
 const Copyright = styled.span`
-   color: ${theme.colors.textColor};
-   font-family: "Josefin Sans";
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 28px; /* 175% */
+   ${font({weight:500, lineHeight: "28px", Fmax:16, Fmin:12})};
 `
 const Unordered = styled.ul`
    li {

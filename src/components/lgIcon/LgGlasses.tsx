@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const LgGlasses =() => {
       return(
-         <Position>
-                    <svg width="557" height="587" viewBox="0 0 557 587" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <StyledSvg width="557" height="587" viewBox="0 0 557 587" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M320.61 580.59C396.11 579.253 512.909 550.659 546.528 477.159C558.272 451.49 557.474 413.752 555.88 338.276C555.413 316.094 554.636 283.761 549.191 243.64C537.895 160.299 530.195 103.575 501.068 70.5256C428.095 -12.254 164.477 -9.85181 51.897 139.163C-9.50653 220.451 -18.9562 336.106 37.1974 431.672C99.0287 536.923 219.541 582.372 320.61 580.59Z" fill="url(#paint0_linear_42_3521)" fill-opacity="0.17"/>
             <path opacity="0.5" d="M193.794 574.207C236.944 551.828 308.762 511.781 361.96 477.622C415.159 443.464 440.576 416.668 409.839 398.706C374.669 378.388 308.466 401.945 249.357 440.814C184.632 483.512 155.964 507.069 125.523 530.037C106.017 544.761 116.361 557.128 135.276 568.907C154.487 580.98 169.855 586.575 193.794 574.207Z" fill="url(#paint1_linear_42_3521)"/>
 
@@ -121,19 +121,23 @@ export const LgGlasses =() => {
             <stop offset="1" stop-color="#6E6CC1"/>
             </linearGradient>
             </defs>
-            </svg>
-         </Position>
+         </StyledSvg>
+
     
 );
 };
 
 const StyledScreen = styled.g`
+   
    &:hover{
       transform: translateX(10px);
    }
 `
 
-const Position = styled.div`
-   position: relative;
-   left: -100px;
+const StyledSvg = styled.svg`
+   max-width: 100%;
+   @media ${theme.media.tablet}{
+      height: 100%;
+   }
+   
 `

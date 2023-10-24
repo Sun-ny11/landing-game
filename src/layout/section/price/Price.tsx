@@ -30,6 +30,10 @@ const StyledSection = styled.section`
    padding: 50px 0 90px;
 `
 const StyledPrice = styled.div`
+   min-width: 100%;
    display:flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
    margin-top: 90px;
 `
