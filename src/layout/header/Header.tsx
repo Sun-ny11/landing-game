@@ -1,6 +1,6 @@
 import React from "react";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import { DesktopMenu } from "../../components/menu/desktopMenu/DesktopMenu";
 import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
@@ -9,13 +9,13 @@ import { MobileMenu } from "../../components/menu/mobileMenu/MobileMenu";
 
 const menuItems = ["Home", "About Us", "Prices", "Rules"]
 
-export const Header =() => {
+export const Header: React.FC =() => {
    return (
       <StyledHeader>
          <Container>
             <FlexWrapper justify="space-between" align="flex-end">
                <Logo width="286px"/>
-               <Menu menuItems={menuItems}/>
+               <DesktopMenu menuItems={menuItems}/>
                <MobileMenu menuItems={menuItems}/>
             </FlexWrapper>
          </Container>

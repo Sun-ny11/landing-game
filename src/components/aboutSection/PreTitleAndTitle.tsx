@@ -13,7 +13,7 @@ type PreTitleAndTitlePropsType = {
 }
 
 
-export const PreTitleAndTitle =(props:PreTitleAndTitlePropsType) => {
+export const PreTitleAndTitle: React.FC<PreTitleAndTitlePropsType> =(props:PreTitleAndTitlePropsType) => {
    return (
       <div>
          <StyledPreTitle align={props.align}> {props.preTitle}</StyledPreTitle>

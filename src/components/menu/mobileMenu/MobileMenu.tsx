@@ -3,10 +3,13 @@ import styled, { css } from "styled-components";
 import { Button } from "../../button/Button";
 import { FlexWrapper } from "../../FlexWrapper";
 import { theme } from "../../../styles/Theme";
+import { Menu } from "../Menu";
 
-export const MobileMenu =(props:{menuItems:Array<string>}) => {
+
+
+export const MobileMenu: React.FC<{menuItems:Array<string>}> =(props:{menuItems:Array<string>}) => {
    return (
-      <StyledMeny>
+      <StyledMobileMeny>
          <BurgerBtn isOpen={false}>
             <span></span>
          </BurgerBtn>
@@ -14,31 +17,24 @@ export const MobileMenu =(props:{menuItems:Array<string>}) => {
          
             <MobileMenuPopup isOpen={false} >
                <FlexWrapper direction="column" align="center" justify="center">
-               <ul>
-                  {props.menuItems.map((item, index) =>{
-                     return   <ListItem key={index}>
-                                 <Link href="">{item}</Link>
-                              </ListItem>
-                  })}
-               </ul>
-               <Button width={180}/>
+                  <Menu menuItems={props.menuItems}/>
+                  <Button width={180}/>
                </FlexWrapper>
             </MobileMenuPopup>            
          
-      </StyledMeny>
+      </StyledMobileMeny>
    );
 };
 
-const StyledMeny = styled.nav`   
+
+
+const StyledMobileMeny = styled.nav`   
    display: none;
    align-self:center;
    @media ${theme.media.large} {
       display: block;
       }
 
-`
-const ListItem = styled.li`
-   
 `
 
 const BurgerBtn = styled.button<{isOpen: boolean}>`
@@ -118,31 +114,4 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
       gap: 34px;
       margin-bottom:60px;
    };
-`
-
-const Link = styled.a`
-   color: #446381;
-   font-family: "Josefin Sans", sans-serif;
-   font-size: 18px;
-   font-weight: 500;
-   line-height: 24px;
-   position: relative;
-
-   &:before{
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0%;
-      height: 3px;
-      background-color: ${theme.colors.preTitleColor};
-      border-radius: 5px;
-      transition: .4s;
-      opacity: 0.5;
-   }
-
-   &:hover:before {
-      width:100%;
-      left: 0;
-   }
 `

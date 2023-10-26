@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "../icon/Icon";
 import styled from "styled-components";
-import { LgMiniVr } from "../lgIcon/LgMiniVr";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../FlexWrapper";
 import { font } from "../../styles/Common";
@@ -12,7 +11,7 @@ type CardsPropsType ={
    nameIcon: () => JSX.Element
 }
 
-export const Cards =(props:CardsPropsType) => {
+export const Cards: React.FC<CardsPropsType> = (props:CardsPropsType) => {
    return (
       <StyledCards>
          <FlexWrapper align="center">

@@ -7,12 +7,12 @@ import { LgMiniVr } from "../../../components/lgIcon/LgMiniVr"
 import { LgMiniGameBoy } from "../../../components/lgIcon/LgMiniGameBoy";
 import { LgMainRing } from "../../../components/lgIcon/LgMainRing";
 import { Container } from "../../../components/Container";
-import BgImg from "./../../../assets/img/bgMain.webp"
+import BgImgWebp from "./../../../assets/img/bgMain.webp"
 import cross from "../../../assets/img/cross.svg";
 import tripleArrow from "../../../assets/img/tripleArrow.svg";
 import { theme } from "../../../styles/Theme";
 
-export const Main =() => {
+export const Main: React.FC =() => {
    return (
       <StyledSection>
          <Container>
@@ -53,7 +53,7 @@ background-color: #ffe6d7f8;
    
    &::after {
       content: "";
-      background-image: url(${BgImg}); 
+      background-image: url(${BgImgWebp}); 
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;

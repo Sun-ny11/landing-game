@@ -13,7 +13,7 @@ type PriceCardPropsType ={
 
 const items = ["10 users included", "2 GB of storage", "Email support", "Help center access", "10 users included"];
 
-export const PriceCard =(props:PriceCardPropsType) => {
+export const PriceCard: React.FC<PriceCardPropsType> =(props:PriceCardPropsType) => {
    return (
       <StyledCard>
             <StyledTitle>{props.plan}</StyledTitle>

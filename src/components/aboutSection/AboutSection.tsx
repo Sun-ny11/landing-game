@@ -15,7 +15,7 @@ type AboutSectionPropsType = {
 }
 
 
-export const AboutSection =(props:AboutSectionPropsType) => {
+export const AboutSection: React.FC<AboutSectionPropsType> =(props:AboutSectionPropsType) => {
    return (
       <StyledSectionText>
          <PreTitleAndTitle preTitle={props.preTitle} title={props.title} special={props.special} specialPrice={props.specialPrice} />

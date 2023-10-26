@@ -1,6 +1,5 @@
 import React from "react";
 import { AboutSection } from "../../../components/aboutSection/AboutSection";
-import { Icon } from "../../../components/icon/Icon";
 import {LgGlasses} from "../../../components/lgIcon/LgGlasses"
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -8,7 +7,7 @@ import { Container } from "../../../components/Container";
 import { font } from "../../../styles/Common";
 import { theme } from "../../../styles/Theme";
 
-export const Glasses =() => {
+export const Glasses: React.FC =() => {
    return (
          <StyledSection>
             <Container>

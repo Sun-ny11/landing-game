@@ -7,7 +7,7 @@ import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { font } from "../../styles/Common";
 
-export const Footer =() => {
+export const Footer: React.FC =() => {
    return (
       <StyledFooter>
          <Container>

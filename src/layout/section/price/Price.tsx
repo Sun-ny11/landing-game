@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 
 
 
-export const Price =() => {
+export const Price: React.FC =() => {
    return (
       <StyledSection>
          <Container>

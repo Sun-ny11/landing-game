@@ -8,7 +8,7 @@ import imgBg from "./../../../assets/img/bgSecXbox.webp"
 import tripleArrow from "../../../assets/img/tripleArrow.svg";
 import { theme } from "../../../styles/Theme";
 
-export const Console =() => {
+export const Console: React.FC =() => {
    return (
       <StyledSection>
          <Container>
