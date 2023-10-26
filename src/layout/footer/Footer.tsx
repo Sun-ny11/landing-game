@@ -7,6 +7,30 @@ import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { font } from "../../styles/Common";
 
+const SocialItemData = [
+   {
+      iconId: "facebook",
+      width: "12",
+      height: "20",
+      viewBox: "0 0 12 20"
+   },
+   {
+      iconId: "twitter",
+      width: "20",
+      height: "18",
+      viewBox: "0 0 20 18"
+   },
+   {
+      iconId: "instagram",
+      width: "20",
+      height: "20",
+      viewBox: "0 0 20 20"
+   },
+
+]
+
+
+
 export const Footer: React.FC =() => {
    return (
       <StyledFooter>
@@ -16,21 +40,14 @@ export const Footer: React.FC =() => {
                <Copyright>Copyright © 2022 HEALAS.LT. All Rights Reserved.</Copyright>
 
                <Unordered>
-                  <li>
-                     <a href="#">
-                        <Icon iconId={"facebook"} width={"12"} height={"20"} viewBox={"0 0 12 20"}/>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <Icon iconId={"twitter"} width={"20"} height={"18"} viewBox={"0 0 20 18"}/>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        <Icon iconId={"instagram"} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
-                     </a>
-                  </li>
+                  {SocialItemData.map((item, index)=>{
+                     return(  <li key={index}>
+                                 <a href="#">
+                                    <Icon iconId={item.iconId} width={item.width} height={item.height} viewBox={item.viewBox}/>
+                                 </a>
+                              </li>
+                     )
+                  })}          
                </Unordered>
             </StyledFlexWrapper>
          </Container>
