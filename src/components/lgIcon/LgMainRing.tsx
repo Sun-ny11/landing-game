@@ -105,8 +105,9 @@ animation: up 1s linear 0s ;
    
 `
 const Quotes = styled.g`
+   opacity: 0;
    transform-origin:center 50px;
-   animation: quotes 1s ease-out 1.1s ;
+   animation: quotes 1s ease-out 1.1s forwards ;
 @keyframes quotes {
    from {
       transform: scale(0, 0);
@@ -116,5 +117,8 @@ const Quotes = styled.g`
       transform: scale(1, 1);
       opacity: 1;
    }
+
+   
 }
+
 `
