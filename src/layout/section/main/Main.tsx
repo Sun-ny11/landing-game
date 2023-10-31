@@ -118,7 +118,12 @@ const StyledSectionWrapper = styled.div`
       position: absolute;
       bottom: -110px;
       left: 250px;
+      animation: spin 5s linear 0s infinite;
    }
+   @keyframes spin {
+   from {transform:rotate(0deg);}
+   to {transform:rotate(360deg);}
+}
    &::after{
       content: url(${tripleArrow});
       position: absolute;
