@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/landing-game/static/css/main.d9015496.css",
-    "main.js": "/landing-game/static/js/main.68f9a4f8.js",
+    "main.js": "/landing-game/static/js/main.7e3577a7.js",
     "static/js/787.25eaef86.chunk.js": "/landing-game/static/js/787.25eaef86.chunk.js",
     "static/media/bgSecXbox.webp": "/landing-game/static/media/bgSecXbox.d02647e67632397ff676.webp",
     "static/media/Qanelas-SemiBold.eot?": "/landing-game/static/media/Qanelas-SemiBold.82ebf874d5904d1da7a8.eot",
     "static/media/Qanelas-SemiBold.ttf": "/landing-game/static/media/Qanelas-SemiBold.0ac0ddf35e9da14cc0d4.ttf",
-    "static/media/img-sprite.svg": "/landing-game/static/media/img-sprite.2e2fce651bbe9c0da06e2eeb545c4763.svg",
+    "static/media/img-sprite.svg": "/landing-game/static/media/img-sprite.da49b31dcf7e213df59c647ff5a872da.svg",
     "static/media/Logo.png": "/landing-game/static/media/Logo.a56c52cb1677716149ab.png",
     "static/media/bgMain.webp": "/landing-game/static/media/bgMain.8919d28377d15248db4f.webp",
     "static/media/Logo.webp": "/landing-game/static/media/Logo.d7048495e7ee6e0400cb.webp",
@@ -16,11 +16,11 @@
     "static/media/cross.svg": "/landing-game/static/media/cross.e834cf96c26b8a8ad1064c9450d569a1.svg",
     "static/media/tripleArrow.svg": "/landing-game/static/media/tripleArrow.81991d970dac52a51edbbaf039ccd7bb.svg",
     "main.d9015496.css.map": "/landing-game/static/css/main.d9015496.css.map",
-    "main.68f9a4f8.js.map": "/landing-game/static/js/main.68f9a4f8.js.map",
+    "main.7e3577a7.js.map": "/landing-game/static/js/main.7e3577a7.js.map",
     "787.25eaef86.chunk.js.map": "/landing-game/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9015496.css",
-    "static/js/main.68f9a4f8.js"
+    "static/js/main.7e3577a7.js"
   ]
 }
