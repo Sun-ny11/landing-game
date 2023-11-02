@@ -5,11 +5,11 @@ import { FlexWrapper } from "../../FlexWrapper";
 import { theme } from "../../../styles/Theme";
 import { Menu } from "../Menu";
 
-export const DesktopMenu: React.FC<{menuItems:Array<string>}> = (props:{menuItems:Array<string>}) => {
+export const DesktopMenu: React.FC = () => {
    return (
       <StyledDesktopMenu>
          <FlexWrapper>
-            <Menu menuItems={props.menuItems}/>
+            <Menu/>
             <Button width={180}/>
          </FlexWrapper>
       </StyledDesktopMenu>

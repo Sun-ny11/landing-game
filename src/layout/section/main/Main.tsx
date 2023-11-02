@@ -14,7 +14,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Main: React.FC =() => {
    return (
-      <StyledSection>
+      <StyledSection id={"home"}>
          <Container>
             <StyledFlexWrapper justify="center" align="center" direction={"row-reverse"} >
                <StyledMainImg>
@@ -76,7 +76,6 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 `
 const StyledMainImg = styled.div`
    position: relative;
-   z-index: 1;
    @media ${theme.media.mobile} {
    
    }
@@ -94,7 +93,7 @@ const UpperCard = styled.div`
 
    @media ${theme.media.mobile} {
       top:auto;
-      bottom: 13vh;
+      bottom: 0;
       
    }
    

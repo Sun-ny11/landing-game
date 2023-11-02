@@ -9,7 +9,7 @@ import { Container } from "../../../components/Container";
 
 export const Price: React.FC =() => {
    return (
-      <StyledSection>
+      <StyledSection id={"prices"}>
          <Container>
             <FlexWrapper align="center" direction="column">
                <PreTitleAndTitle align="center" preTitle={"Our Pricing"} title={"Choose Your Plan"}/>
@@ -20,7 +20,6 @@ export const Price: React.FC =() => {
                </StyledPrice>
             </FlexWrapper>
          </Container>
-         
       </StyledSection>
    );
 };

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../FlexWrapper";
 import { font } from "../../styles/Common";
+import { JackInTheBox }  from "react-awesome-reveal";
 
 
 
@@ -13,22 +14,26 @@ type CardsPropsType ={
 
 export const Cards: React.FC<CardsPropsType> = (props:CardsPropsType) => {
    return (
-      <StyledCards>
-         <FlexWrapper align="center">
-            <div>
-               <StyledTitleCard>Sony Dualshock 4 Wireless Controller </StyledTitleCard>
-               <StyledPriceCard>$50 Per Hour</StyledPriceCard>
+      <JackInTheBox delay={1900} triggerOnce={true}>
+         <StyledCards>
+            <FlexWrapper align="center">
+               
                <div>
-                  <Icon iconId={"stars"} width={"48"} height={"8"} viewBox={"0 0 48 8"}/>
-                  <StyledReview>125+Review</StyledReview>
+                  <StyledTitleCard>Sony Dualshock 4 Wireless Controller </StyledTitleCard>
+                  <StyledPriceCard>$50 Per Hour</StyledPriceCard>
+                  <div>
+                     <Icon iconId={"stars"} width={"48"} height={"8"} viewBox={"0 0 48 8"}/>
+                     <StyledReview>125+Review</StyledReview>
+                  </div>
                </div>
-            </div>
 
-            <div>
-               {props.nameIcon()}
-            </div>
-         </FlexWrapper>
-      </StyledCards>
+               <IconCard>
+                  {props.nameIcon()}
+               </IconCard>
+            </FlexWrapper>
+         </StyledCards>
+      </JackInTheBox>
+      
    );
       
       
@@ -60,4 +65,9 @@ const StyledPriceCard = styled.span`
 const StyledReview = styled.span`
    ${font({weight:500,color: theme.colors.preTitleColor, Fmax:8,Fmin:6, lineHeight:"12px"})}
    margin-left: 6px;
+`
+const IconCard = styled.div`
+   @media ${theme.media.mobile}{
+      display: none;
+   }
 `

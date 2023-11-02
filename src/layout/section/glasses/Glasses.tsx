@@ -6,26 +6,27 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { font } from "../../../styles/Common";
 import { theme } from "../../../styles/Theme";
+import { Fade } from "react-awesome-reveal";
+
 
 export const Glasses: React.FC =() => {
    return (
-         <StyledSection>
-            <Container>
-               <StyledFlexWrapper align="center" justify="center" gap="35px">
-                  <StyledImg>
-                     <LgGlasses/>
-                  </StyledImg>
+      <StyledSection id={"about"}>
+         <Container>
+            <StyledFlexWrapper align="center" justify="center" gap="35px">
+               <StyledImg>
+                  <LgGlasses/>
+               </StyledImg>
+               <Fade duration={1500}>
                   <AboutWrapper>
-                           <AboutSection preTitle={"About VR Glasses"} 
-                              title={"The New VR Glasses Series"}
-                              text={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed."}/>
+                     <AboutSection preTitle={"About VR Glasses"} 
+                                    title={"The New VR Glasses Series"}
+                                    text={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed."}/>
                   </AboutWrapper>
-
-               </StyledFlexWrapper>
-            </Container>      
-            
-         </StyledSection>
-      
+               </Fade>
+            </StyledFlexWrapper>
+         </Container>      
+      </StyledSection>
    );
 };
 
@@ -44,7 +45,7 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 
 const AboutWrapper = styled.div`
    position: relative;
-   z-index: 1;
+   z-index: 0;
 
    &::before {
       content: "VR";

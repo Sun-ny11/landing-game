@@ -3,6 +3,7 @@ import logo from "./../../assets/img/Logo.png"
 import logoWebp from "./../../assets/img/Logo.webp"
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { animateScroll } from "react-scroll";
 
 type LogoPropsType ={
    width: string
@@ -10,7 +11,7 @@ type LogoPropsType ={
 
 export const Logo: React.FC<LogoPropsType> =(props:LogoPropsType) => {
    return (   
-      <StyledLogo width={props.width}>
+      <StyledLogo onClick={() => {animateScroll.scrollToTop()}} width={props.width}>
          <picture>
             <source srcSet={logoWebp} type="image/webp"/>
             <source srcSet={logo} type="image/jpeg"/>

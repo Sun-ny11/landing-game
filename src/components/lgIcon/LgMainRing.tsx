@@ -96,7 +96,7 @@ const StyledSvg = styled.svg`
 
 `
 const Man = styled.g`
-animation: up 1s linear 0s ;
+animation: up 1s cubic-bezier(.67,.53,.65,.92) 0s ;
 @keyframes up {
    from {transform:translate(0,100px);}
    to {transform:translate(0,0);}

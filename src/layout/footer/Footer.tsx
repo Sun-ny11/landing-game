@@ -60,6 +60,8 @@ const StyledFooter = styled.footer`
    border-top: 1.5px solid #816F8C;
    background-color: ${theme.colors.bacgroundColor};
    padding: 25px 0 20px;
+   position: relative;
+   z-index: 1;
    ul {
       display: flex;
       gap:30px;

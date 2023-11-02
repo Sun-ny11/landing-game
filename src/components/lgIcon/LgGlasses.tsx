@@ -122,15 +122,21 @@ export const LgGlasses =() => {
             </linearGradient>
             </defs>
          </StyledSvg>
-
-    
 );
 };
 
 const StyledScreen = styled.g`
-   
-   &:hover{
-      transform: translateX(10px);
+   animation: screen 2.5s ease-in-out 0s infinite forwards   ;
+   @keyframes screen {
+      0% {
+         transform: translateY(12px);
+      }
+      50% {
+         transform: translateY(0);
+      }
+      100% {
+         transform: translateY(12px);
+      }
    }
 `
 

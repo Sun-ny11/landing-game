@@ -7,7 +7,6 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 import { MobileMenu } from "../../components/menu/mobileMenu/MobileMenu";
 
-const menuItems = ["Home", "About Us", "Prices", "Rules"]
 
 export const Header: React.FC =() => {
    return (
@@ -15,8 +14,8 @@ export const Header: React.FC =() => {
          <Container>
             <FlexWrapper justify="space-between" align="flex-end">
                <Logo width="286px"/>
-               <DesktopMenu menuItems={menuItems}/>
-               <MobileMenu menuItems={menuItems}/>
+               <DesktopMenu/>
+               <MobileMenu/>
             </FlexWrapper>
          </Container>
       </StyledHeader>

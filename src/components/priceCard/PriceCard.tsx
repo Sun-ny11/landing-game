@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import checkMark from "./../../assets/img/checkMark.svg"
 import { font } from "../../styles/Common";
+import { Bounce } from "react-awesome-reveal";
 
 
 type PriceCardPropsType ={
@@ -15,10 +16,10 @@ const items = ["10 users included", "2 GB of storage", "Email support", "Help ce
 
 export const PriceCard: React.FC<PriceCardPropsType> =(props:PriceCardPropsType) => {
    return (
-      <StyledCard>
+      <Bounce triggerOnce={true}>
+         <StyledCard>
             <StyledTitle>{props.plan}</StyledTitle>
             <StyledPrice>{props.price}<span> / Per Hour</span></StyledPrice>
-            
             <Unordered>
                {items.map((item, index) => {
                   return <ListItem key="index">
@@ -27,7 +28,9 @@ export const PriceCard: React.FC<PriceCardPropsType> =(props:PriceCardPropsType)
                })}
             </Unordered>
             <Button width={268} name={"Select This Plan"}/>
-      </StyledCard>
+         </StyledCard>
+      </Bounce>
+      
    );
 };
 
@@ -82,4 +85,8 @@ ${font({lineHeight: "25px", weight:500, Fmax: 18, Fmin: 14})}
 const Unordered = styled.ul`
    margin: 46px 0;
    text-align: start;
+`
+
+const StyledClicCard = styled.div`
+   background-color: red;
 `

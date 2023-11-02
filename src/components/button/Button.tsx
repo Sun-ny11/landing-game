@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { font } from "../../styles/Common";
 
 type ButtonPropsType ={
    width?:number
    name?: string
 }
-export const Button =(props:ButtonPropsType) => {
+export const Button: React.FC<ButtonPropsType> =(props:ButtonPropsType) => {
    return (
       <Link {...props} href="#">{props.name || "Get Started Now"}</Link>
    );
@@ -19,10 +20,5 @@ const Link = styled.a<ButtonPropsType>`
    border-radius: 25px;
    text-align: center;
 
-   color: #FFF;
-
-   font-family: "Josefin Sans";
-   font-size: 18px;
-   font-weight: 500;
-   line-height: 24px;
+   ${font({color:"#FFF", weight:500, lineHeight: "24px", Fmax:18, Fmin:15})}
 `

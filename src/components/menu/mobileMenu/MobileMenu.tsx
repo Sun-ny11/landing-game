@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { Button } from "../../button/Button";
 import { FlexWrapper } from "../../FlexWrapper";
@@ -7,18 +7,22 @@ import { Menu } from "../Menu";
 
 
 
-export const MobileMenu: React.FC<{menuItems:Array<string>}> =(props:{menuItems:Array<string>}) => {
+
+
+export const MobileMenu: React.FC =() => {
+   const [isMenuOpen, setIsOpen] = useState(false)
+   const onClicBtnBurger = () => {setIsOpen(!isMenuOpen)}
    return (
       <StyledMobileMeny>
-         <BurgerBtn isOpen={false}>
+         
+         <BurgerBtn isOpen={isMenuOpen} onClick={onClicBtnBurger}>
             <span></span>
          </BurgerBtn>
-
          
-            <MobileMenuPopup isOpen={false} >
+            <MobileMenuPopup isOpen={isMenuOpen} >
                <FlexWrapper direction="column" align="center" justify="center">
-                  <Menu menuItems={props.menuItems}/>
-                  <Button width={180}/>
+                  <Menu />
+                  <Button width={150}/>
                </FlexWrapper>
             </MobileMenuPopup>            
          
@@ -30,7 +34,8 @@ export const MobileMenu: React.FC<{menuItems:Array<string>}> =(props:{menuItems:
 
 const StyledMobileMeny = styled.nav`   
    display: none;
-   align-self:center;
+   align-self:center; 
+
    @media ${theme.media.large} {
       display: block;
       }
@@ -44,6 +49,10 @@ const BurgerBtn = styled.button<{isOpen: boolean}>`
    cursor: pointer;
    z-index: 99999;
 
+   ${props => props.isOpen && css<{isOpen: boolean}>`
+      position: fixed;
+      right: 20px;
+   `};
 
    span {
       display: block;
@@ -100,10 +109,16 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
    background-color: #fff;
    z-index: 9999;
    display: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translateX(101%);
+   transition: 1s ease-in-out;
+   border-radius: 30%;
+
    ${props => props.isOpen && css<{isOpen: boolean}>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateX(0);
+      border-radius: 0;
    `};
 
    ul{
@@ -114,4 +129,11 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
       gap: 34px;
       margin-bottom:60px;
    };
-`
+
+   @media ${theme.media.mobile} {
+      a {
+         padding: 10px 0;
+      }
+   }
+   
+`;
